@@ -8,6 +8,7 @@
     <modules>
         <module>java_spark_example</module>
         <module>java_problems</module>
+        <module>market_ops</module>
     </modules>
     <name>my_projects</name>
     <url>http://maven.apache.org</url>

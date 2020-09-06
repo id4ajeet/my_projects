@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# For debugging purposes uncomment next line
+# set -x
+set -eo pipefail
+
+java -cp .:target/market-ops-1.0.jar:target/lib/* com.ajeet.mkt.LoanAlerts $1 $2

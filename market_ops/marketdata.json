@@ -1,0 +1,506 @@
+[
+  {
+    "ticker": "H",
+    "price": 51.31,
+    "isin": "US4485791028"
+  },
+  {
+    "ticker": "WNRP",
+    "price": 465,
+    "isin": "US9561524094"
+  },
+  {
+    "ticker": "GVA",
+    "price": 58.98,
+    "isin": "US3873281071"
+  },
+  {
+    "ticker": "GPRO",
+    "price": 9.98,
+    "isin": "US38268T1034"
+  },
+  {
+    "ticker": "GLW",
+    "price": 24.04,
+    "isin": "US2193501051"
+  },
+  {
+    "ticker": "TRII",
+    "price": 0.0015,
+    "isin": "US8966991056"
+  },
+  {
+    "ticker": "GLBZ",
+    "price": 10.82,
+    "isin": "US3774071019"
+  },
+  {
+    "ticker": "GGM",
+    "price": 21.06,
+    "isin": "US40168G1085"
+  },
+  {
+    "ticker": "GG",
+    "price": 13.19,
+    "isin": "CA3809564097"
+  },
+  {
+    "ticker": "SUNEQ",
+    "price": 0.1251,
+    "isin": "US86732Y1091"
+  },
+  {
+    "ticker": "FTR",
+    "price": 3.65,
+    "isin": "US35906A1088"
+  },
+  {
+    "ticker": "FTK",
+    "price": 13.46,
+    "isin": "US3433891021"
+  },
+  {
+    "ticker": "FSV",
+    "price": 43.49,
+    "isin": "CA33767E1034"
+  },
+  {
+    "ticker": "FSLR",
+    "price": 30.32,
+    "isin": "US3364331070"
+  },
+  {
+    "ticker": "FSD",
+    "price": 15.72,
+    "isin": "US33738E1091"
+  },
+  {
+    "ticker": "FSB",
+    "price": 37.8,
+    "isin": "US35352P1049"
+  },
+  {
+    "ticker": "FRSH",
+    "price": 4.74,
+    "isin": "US6988141007"
+  },
+  {
+    "ticker": "FPO",
+    "price": 9.82,
+    "isin": "US33610F1093"
+  },
+  {
+    "ticker": "FPI",
+    "price": 11.12,
+    "isin": "US31154R1095"
+  },
+  {
+    "ticker": "FORM",
+    "price": 11.2,
+    "isin": "US3463751087"
+  },
+  {
+    "ticker": "PENC",
+    "price": 1.8499,
+    "isin": "US7065822022"
+  },
+  {
+    "ticker": "FLL",
+    "price": 1.99,
+    "isin": "US3596781092"
+  },
+  {
+    "ticker": "REN",
+    "price": 33.5,
+    "isin": "US76116A3068"
+  },
+  {
+    "ticker": "FLIR",
+    "price": 35.92,
+    "isin": "US3024451011"
+  },
+  {
+    "ticker": "FII",
+    "price": 27.49,
+    "isin": "US3142111034"
+  },
+  {
+    "ticker": "FICO",
+    "price": 113.69,
+    "isin": "US3032501047"
+  },
+  {
+    "ticker": "FFNW",
+    "price": 17,
+    "isin": "US32022K1025"
+  },
+  {
+    "ticker": "FEO",
+    "price": 13.85,
+    "isin": "US33731K1025"
+  },
+  {
+    "ticker": "FENX",
+    "price": 3.4,
+    "isin": "US31446L1008"
+  },
+  {
+    "ticker": "MZA",
+    "price": 14.07,
+    "isin": "US09254K1097"
+  },
+  {
+    "ticker": "FDUS",
+    "price": 16.18,
+    "isin": "US3165001070"
+  },
+  {
+    "ticker": "MYSN",
+    "price": 0.0197,
+    "isin": "US6286351043"
+  },
+  {
+    "ticker": "FDEF",
+    "price": 46.29,
+    "isin": "US32006W1062"
+  },
+  {
+    "ticker": "FCFS",
+    "price": 45.9,
+    "isin": "US33767D1054"
+  },
+  {
+    "ticker": "FCAP",
+    "price": 30.3,
+    "isin": "US31942S1042"
+  },
+  {
+    "ticker": "FBMS",
+    "price": 24.55,
+    "isin": "US3189161033"
+  },
+  {
+    "ticker": "CHN",
+    "price": 15.95,
+    "isin": "US1693731077"
+  },
+  {
+    "ticker": "HCN",
+    "price": 62.81,
+    "isin": "US95040Q1040"
+  },
+  {
+    "ticker": "ESGR",
+    "price": 196.65,
+    "isin": "BMG3075P1014"
+  },
+  {
+    "ticker": "KSMRF",
+    "price": 0.0346,
+    "isin": "CA2107371023"
+  },
+  {
+    "ticker": "LNNGF",
+    "price": 0.72,
+    "isin": "KYG5496K1242"
+  },
+  {
+    "ticker": "LKST",
+    "price": 0.15,
+    "isin": "US5434411097"
+  },
+  {
+    "ticker": "ZRVT",
+    "price": 0.112,
+    "isin": "US9898291060"
+  },
+  {
+    "ticker": "ZONX",
+    "price": 1.0E-4,
+    "isin": "US98979L1044"
+  },
+  {
+    "ticker": "ZMTP",
+    "price": 2.4,
+    "isin": "US98978K1079"
+  },
+  {
+    "ticker": "ZFSVF",
+    "price": 262.7,
+    "isin": "CH0011075394"
+  },
+  {
+    "ticker": "ZADDF",
+    "price": 0.0722,
+    "isin": "CA98884X1024"
+  },
+  {
+    "ticker": "ZAAP",
+    "price": 0.0239,
+    "isin": "US98912M2017"
+  },
+  {
+    "ticker": "YAHOF",
+    "price": 3.77,
+    "isin": "JP3933800009"
+  },
+  {
+    "ticker": "Y",
+    "price": 569.5,
+    "isin": "US0171751003"
+  },
+  {
+    "ticker": "XREG",
+    "price": 0.011,
+    "isin": "US9838101023"
+  },
+  {
+    "ticker": "EPZM",
+    "price": 11.1,
+    "isin": "US29428V1044"
+  },
+  {
+    "ticker": "WWTH",
+    "price": 3.0E-4,
+    "isin": "US9773991040"
+  },
+  {
+    "ticker": "WWRL",
+    "price": 0,
+    "isin": "US98155B1026"
+  },
+  {
+    "ticker": "WWPW",
+    "price": 0.017,
+    "isin": "US97315W1053"
+  },
+  {
+    "ticker": "WSTG",
+    "price": 17.5,
+    "isin": "US9467601053"
+  },
+  {
+    "ticker": "WSTC",
+    "price": 23.86,
+    "isin": "US9523552043"
+  },
+  {
+    "ticker": "WSRA",
+    "price": 0.0015,
+    "isin": "US95952L2007"
+  },
+  {
+    "ticker": "WST",
+    "price": 81.2,
+    "isin": "US9553061055"
+  },
+  {
+    "ticker": "FIRT",
+    "price": 20,
+    "isin": "US31868G1004"
+  },
+  {
+    "ticker": "WSBC",
+    "price": 39.88,
+    "isin": "US9508101014"
+  },
+  {
+    "ticker": "WRTBF",
+    "price": 42.28,
+    "isin": "FI0009003727"
+  },
+  {
+    "ticker": "WRN",
+    "price": 0.9,
+    "isin": "CA95805V1085"
+  },
+  {
+    "ticker": "WRMT",
+    "price": 3.2,
+    "isin": "US98149J1043"
+  },
+  {
+    "ticker": "WPKS",
+    "price": 0.0338,
+    "isin": "US98153N1081"
+  },
+  {
+    "ticker": "WPFH",
+    "price": 0.45,
+    "isin": "US98160D1019"
+  },
+  {
+    "ticker": "WOSCF",
+    "price": 57.75,
+    "isin": "JE00BFNWV485"
+  },
+  {
+    "ticker": "WLTW",
+    "price": 124.36,
+    "isin": "IE00BDB6Q211"
+  },
+  {
+    "ticker": "WFTSF",
+    "price": 0.1964,
+    "isin": "CA94354B1004"
+  },
+  {
+    "ticker": "WFTBF",
+    "price": 35.6591,
+    "isin": "CA9528451052"
+  },
+  {
+    "ticker": "WFT",
+    "price": 5.14,
+    "isin": "IE00BLNN3691"
+  },
+  {
+    "ticker": "WFSTF",
+    "price": 1.37,
+    "isin": "CA9582112038"
+  },
+  {
+    "ticker": "EML",
+    "price": 21.45,
+    "isin": "US2763171046"
+  },
+  {
+    "ticker": "WFM",
+    "price": 30.39,
+    "isin": "US9668371068"
+  },
+  {
+    "ticker": "WDC",
+    "price": 63.66,
+    "isin": "US9581021055"
+  },
+  {
+    "ticker": "EMO",
+    "price": 12.85,
+    "isin": "US18469P1003"
+  },
+  {
+    "ticker": "WCG",
+    "price": 137.05,
+    "isin": "US94946T1060"
+  },
+  {
+    "ticker": "VPGLF",
+    "price": 0.861,
+    "isin": "KYG931751005"
+  },
+  {
+    "ticker": "VPER",
+    "price": 1.0E-4,
+    "isin": "US92762R1059"
+  },
+  {
+    "ticker": "VPCO",
+    "price": 1.0E-4,
+    "isin": "US9220997004"
+  },
+  {
+    "ticker": "VOPKF",
+    "price": 46.59,
+    "isin": "NL0009432491"
+  },
+  {
+    "ticker": "ELON",
+    "price": 5.16,
+    "isin": "US27874N3035"
+  },
+  {
+    "ticker": "ELMD",
+    "price": 3.78,
+    "isin": "US2854091087"
+  },
+  {
+    "ticker": "VICR",
+    "price": 14.6,
+    "isin": "US9258151029"
+  },
+  {
+    "ticker": "VFL",
+    "price": 12.85,
+    "isin": "US24610T1088"
+  },
+  {
+    "ticker": "VAPR",
+    "price": 0.0135,
+    "isin": "US9221051017"
+  },
+  {
+    "ticker": "VAPI",
+    "price": 0.155,
+    "isin": "US9220971009"
+  },
+  {
+    "ticker": "UTSI",
+    "price": 2.02,
+    "isin": "KYG9310A1141"
+  },
+  {
+    "ticker": "UPLMQ",
+    "price": 7.1721,
+    "isin": "CA9039141093"
+  },
+  {
+    "ticker": "UNLYF",
+    "price": 39.35,
+    "isin": "GB00B10RZP78"
+  },
+  {
+    "ticker": "UNIR",
+    "price": 3.45,
+    "isin": "US90916U1079"
+  },
+  {
+    "ticker": "UNIB",
+    "price": 7.2,
+    "isin": "US9140901052"
+  },
+  {
+    "ticker": "UNGS",
+    "price": 1.0E-4,
+    "isin": "US8713241094"
+  },
+  {
+    "ticker": "ULTR",
+    "price": 0.1661,
+    "isin": "BSP943981071"
+  },
+  {
+    "ticker": "ULTI",
+    "price": 204.93,
+    "isin": "US90385D1072"
+  },
+  {
+    "ticker": "UDFI",
+    "price": 4.2,
+    "isin": "US9101871039"
+  },
+  {
+    "ticker": "UABK",
+    "price": 0.315,
+    "isin": "US90933S1015"
+  },
+  {
+    "ticker": "TYIDF",
+    "price": 46.78,
+    "isin": "JP3634600005"
+  },
+  {
+    "ticker": "TSTIF",
+    "price": 1.866,
+    "isin": "CA8730151013"
+  },
+  {
+    "ticker": "XENE",
+    "price": 7.85,
+    "isin": "CA98420N1050"
+  },
+  {
+    "price": 1.47,
+    "isin": "IE0003295239"
+  }
+]
