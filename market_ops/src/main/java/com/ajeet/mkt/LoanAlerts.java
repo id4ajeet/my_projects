@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author <a href="mailto:AjeetKumar.Singh1@britebill.com">Ajeet</a>
+ * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
  */
 public class LoanAlerts {
 

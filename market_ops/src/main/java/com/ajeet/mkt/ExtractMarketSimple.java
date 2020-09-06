@@ -13,7 +13,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 
 /**
- * @author <a href="mailto:AjeetKumar.Singh1@britebill.com">Ajeet</a>
+ * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
  */
 public class ExtractMarketSimple {
 
