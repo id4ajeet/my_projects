@@ -1,4 +1,6 @@
-package com.ajeet.spark;
+package com.ajeet.spark.sample;
+
+
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -17,15 +19,9 @@ import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 /**
- * @author <a href="mailto:AjeetKumar.Singh1@britebill.com">Ajeet</a>
+ * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
  */
-public class HelloWorldTest {
-
-    @Before
-    public void setup() {
-        RestAssured.baseURI = "http://localhost";
-        RestAssured.port = 4567;
-    }
+public class HelloWorldTest extends ITest {
 
     @Test
     public void testHelloWorld() {

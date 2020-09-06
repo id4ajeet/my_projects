@@ -1,4 +1,4 @@
-package com.ajeet.spark;
+package com.ajeet.spark.sample;
 
 import static spark.Spark.get;
 import static spark.Spark.post;
