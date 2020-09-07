@@ -7,16 +7,10 @@ import com.ajeet.spark.app.repo.impl.BookRepository;
 import com.ajeet.spark.app.svc.ifc.IBookResponse;
 import com.ajeet.spark.app.svc.ifc.IBooksApi;
 import com.ajeet.spark.app.util.JsonTransformer;
-import com.sun.xml.internal.ws.api.pipe.ContentType;
-
-import org.eclipse.jetty.http.HttpHeader;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import javax.xml.ws.spi.http.HttpHandler;
 
 /**
  * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
@@ -32,7 +26,7 @@ public class BooksApi implements IBooksApi {
             Book book = transformer.render(Book.class, request.body());
             int id = repository.put(book);
             response.status(200);
-            response.header(HttpHeader.CONTENT_TYPE.toString(), "application/json");
+            response.header("Content-Type", "application/json");
             return getResponseMap(String.valueOf(id), "success");
         };
     }
@@ -43,7 +37,7 @@ public class BooksApi implements IBooksApi {
             String id = request.params(":id");
             Book book = repository.get(Integer.parseInt(id));
             response.status(200);
-            response.header(HttpHeader.CONTENT_TYPE.toString(), "application/json");
+            response.header("Content-Type", "application/json");
             return book;
         };
     }
@@ -53,7 +47,7 @@ public class BooksApi implements IBooksApi {
         return (request, response) -> {
             Collection<Book> books = repository.getAll();
             response.status(200);
-            response.header(HttpHeader.CONTENT_TYPE.toString(), "application/json");
+            response.header("Content-Type", "application/json");
             return books;
         };
     }
@@ -64,7 +58,7 @@ public class BooksApi implements IBooksApi {
             String id = request.params(":id");
             repository.remove(Integer.parseInt(id));
             response.status(200);
-            response.header(HttpHeader.CONTENT_TYPE.toString(), "application/json");
+            response.header("Content-Type", "application/json");
             return getResponseMap(String.valueOf(id), "success");
         };
     }

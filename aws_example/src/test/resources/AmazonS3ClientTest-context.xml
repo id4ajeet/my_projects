@@ -15,8 +15,8 @@
 
     <!--bean id="amazonS3Client" class="hello.aws.AmazonS3Client">
         <property name="bucketName" value="ajeet-tests-s3"/>
-        <property name="awsAccessKey" value="AKIAULK5FQ42GH3IPBUL"/>
-        <property name="awsSecretKey" value="nKDbHNEADArSBkbFnHHrMfHLUA2kGo7vl2IysEH0"/>
+        <property name="awsAccessKey" value="DUMMY_ACCESS_KEY"/>
+        <property name="awsSecretKey" value="DUMMY_SECRET_KEY"/>
         <property name="regionEndpoint" value="ap-south-1"/>
         <property name="corePoolSize" value="1"/>
         <property name="maximumPoolSize" value="10"/>
