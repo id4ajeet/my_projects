@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath*:/application-test.properties"/>
+
+    <context:spring-configured/>
+
+    <import resource="AmazonS3Config-context.xml"/>
+
+    <!--bean id="amazonS3Client" class="hello.aws.AmazonS3Client">
+        <property name="bucketName" value="ajeet-tests-s3"/>
+        <property name="awsAccessKey" value="AKIAULK5FQ42GH3IPBUL"/>
+        <property name="awsSecretKey" value="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"/>
+        <property name="regionEndpoint" value="ap-south-1"/>
+        <property name="corePoolSize" value="1"/>
+        <property name="maximumPoolSize" value="10"/>
+        <property name="keepAliveTime" value="120"/>
+        <property name="maximumClientConnections" value="100"/>
+    </bean-->
+
+</beans>

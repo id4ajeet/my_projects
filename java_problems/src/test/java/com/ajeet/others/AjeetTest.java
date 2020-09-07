@@ -1,10 +1,4 @@
-/*
- * (c) Copyright 2014 Brite:Bill Ltd.
- *
- * 23 Windsor Place, Dublin 2, Ireland
- * info@britebill.com
- * +353 1 661 9426
- */
+
 package com.ajeet.others;
 
 import org.junit.Assert;
