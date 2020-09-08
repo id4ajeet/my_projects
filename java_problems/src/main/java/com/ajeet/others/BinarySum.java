@@ -75,6 +75,13 @@ public class BinarySum {
         return sb.reverse().toString();
     }
 
+    /**
+     * Adds padding with 0 to have equal length then sum
+     *
+     * @param num1 Number1
+     * @param num2 Number2
+     * @return sum of numbers
+     */
     public String sumPad(String num1, String num2) {
 
         if (num1.length() < num2.length()) {
@@ -89,22 +96,19 @@ public class BinarySum {
 
         StringBuilder sb = new StringBuilder();
 
-        int index1 = num1.length() - 1;
-        int index2 = num2.length() - 1;
+        int index = num1.length() - 1;
+        int carry = 0, d1, d2, digit;
 
-        int carry = 0;
-        while (index1 >= 0 && index2 >= 0) {
+        while (index >= 0) {
 
-            int d1 = num1.charAt(index1) - '0';
-            int d2 = num2.charAt(index2) - '0';
+            d1 = num1.charAt(index) - '0';
+            d2 = num2.charAt(index) - '0';
 
-            int digit = (d1 ^ d2) ^ carry;
+            digit = (d1 ^ d2) ^ carry;
             carry = (d1 & d2) | (d1 & carry) | (d2 & carry);
 
             sb.append(digit);
-
-            index1--;
-            index2--;
+            index--;
         }
 
         if (carry > 0) {
