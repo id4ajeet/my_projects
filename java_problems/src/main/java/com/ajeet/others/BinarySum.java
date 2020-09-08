@@ -1,7 +1,8 @@
 package com.ajeet.others;
 
-import java.util.Objects;
 import java.util.function.BiConsumer;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
@@ -74,12 +75,51 @@ public class BinarySum {
         return sb.reverse().toString();
     }
 
+    public String sumPad(String num1, String num2) {
+
+        if (num1.length() < num2.length()) {
+            int diff = num2.length() - num1.length();
+            String collect = IntStream.range(0, diff).mapToObj(o -> "0").collect(Collectors.joining());
+            num1 = collect + num1;
+        } else {
+            int diff = num1.length() - num2.length();
+            String collect = IntStream.range(0, diff).mapToObj(o -> "0").collect(Collectors.joining());
+            num2 = collect + num2;
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        int index1 = num1.length() - 1;
+        int index2 = num2.length() - 1;
+
+        int carry = 0;
+        while (index1 >= 0 && index2 >= 0) {
+
+            int d1 = num1.charAt(index1) - '0';
+            int d2 = num2.charAt(index2) - '0';
+
+            int digit = (d1 ^ d2) ^ carry;
+            carry = (d1 & d2) | (d1 & carry) | (d2 & carry);
+
+            sb.append(digit);
+
+            index1--;
+            index2--;
+        }
+
+        if (carry > 0) {
+            sb.append(carry);
+        }
+        return sb.reverse().toString();
+    }
+
     public static void main(String[] args) {
         BinarySum b = new BinarySum();
 
         BiConsumer<String, String> sum = (s1, s2) -> {
             System.out.println(b.sum1(s1, s2));
             System.out.println(b.sum2(s1, s2));
+            System.out.println(b.sumPad(s1, s2));
         };
 
         sum.accept("11101", "0101");
@@ -88,6 +128,7 @@ public class BinarySum {
 
         b.printBit();
         b.printBitCarry();
+
     }
 
     public void printBit() {
@@ -99,7 +140,6 @@ public class BinarySum {
         method.accept(0, 1);
         method.accept(1, 0);
         method.accept(1, 1);
-
     }
 
 
@@ -118,19 +158,9 @@ public class BinarySum {
         method.accept(1, 1, 1);
     }
 
-
     @FunctionalInterface
     public interface TriConsumer<T, U, V> {
         void accept(T t, U u, V v);
-
-        default TriConsumer<T, U, V> andThen(TriConsumer<? super T, ? super U, ? super V> after) {
-            Objects.requireNonNull(after);
-
-            return (l, r, v) -> {
-                accept(l, r, v);
-                after.accept(l, r, v);
-            };
-        }
     }
 
 }
