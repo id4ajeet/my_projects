@@ -19,3 +19,4 @@ overlays
 # Mac
 .DS_Store
 logs/
+/data/store/
