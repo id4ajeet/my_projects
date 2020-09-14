@@ -29,9 +29,9 @@ public class CDRController {
         return callDataService.findAll();
     }
 
-    @GetMapping(path = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public CallDataDto get(@PathVariable int id) {
-        return callDataService.find(id);
+    @GetMapping(path = "/{uuid}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public List<CallDataDto> get(@PathVariable String uuid) {
+        return callDataService.findByUuid(uuid);
     }
 
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
@@ -48,8 +48,8 @@ public class CDRController {
         return save ? "SUCCESS" : "FAILED";
     }
 
-    @DeleteMapping(path = "/{id}")
-    public void delete(@PathVariable int id) {
-        callDataService.delete(id);
+    @DeleteMapping(path = "/{uuid}")
+    public void delete(@PathVariable String uuid) {
+        callDataService.deleteBuUuid(uuid);
     }
 }

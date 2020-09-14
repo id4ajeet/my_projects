@@ -41,8 +41,6 @@ CREATE SEQUENCE hibernate_sequence
   START WITH 1
   INCREMENT BY 1;
 
--- insert first record
-INSERT into sync_data (sync_date) VALUES (current_timestamp);
 
 CREATE OR REPLACE VIEW cdr_report AS
 select uuid, sum(HANGUP)/60 as successful_calls_minutes, sum(ANSWERED) as answered_call_count, sum(UNMATCHED) as unmatched_call_count, sum(TOTAL_CALL) as total_call

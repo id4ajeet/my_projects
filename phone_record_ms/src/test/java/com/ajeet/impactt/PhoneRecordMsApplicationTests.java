@@ -8,7 +8,7 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootTest
 @ActiveProfiles("test")
 @DirtiesContext
-class PhoneRecordMsApplicationTests {
+public class PhoneRecordMsApplicationTests {
 
 	@Test
 	void contextLoads() {

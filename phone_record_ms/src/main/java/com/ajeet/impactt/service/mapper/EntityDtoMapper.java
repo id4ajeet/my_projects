@@ -92,7 +92,9 @@ public class EntityDtoMapper implements IEntityDtoMapper {
         List<ReportDataDto> reportsData = entity.stream().map(this::map).collect(Collectors.toList());
         ReportDto report = new ReportDto();
         report.setCdrReport(reportsData);
-        report.setSyncDate(sync.getSyncDate());
+        if (sync != null && sync.getSyncDate() != null) {
+            report.setSyncDate(sync.getSyncDate());
+        }
         return report;
     }
 

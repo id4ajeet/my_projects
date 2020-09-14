@@ -17,11 +17,14 @@ public interface ICallDataRepoService {
     CallDataDto find(int id);
 
     @Transactional
+    List<CallDataDto> findByUuid(String id);
+
+    @Transactional
     boolean save(CallDataDto dto);
 
     @Transactional
     boolean saveAll(List<CallDataDto> dtos);
 
     @Transactional
-    void delete(int id);
+    void deleteBuUuid(String uuid);
 }

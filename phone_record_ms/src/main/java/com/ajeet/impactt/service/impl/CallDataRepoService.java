@@ -54,6 +54,16 @@ public class CallDataRepoService implements ICallDataRepoService {
     }
 
     @Override
+    public List<CallDataDto> findByUuid(String uuid) {
+        List<CallDataDto> calls = new ArrayList<>();
+        callDataRepository.findCallDataByUuid(uuid).forEach(ent -> {
+            CallDataDto dto = entityDtoMapper.map(ent);
+            calls.add(dto);
+        });
+        return calls;
+    }
+
+    @Override
     @Transactional
     public boolean save(CallDataDto dto) {
         List<CallDataDto> filteredList = filter.run(Arrays.asList(dto));
@@ -76,7 +86,7 @@ public class CallDataRepoService implements ICallDataRepoService {
 
     @Override
     @Transactional
-    public void delete(int id) {
-        callDataRepository.deleteById(id);
+    public void deleteBuUuid(String uuid) {
+        callDataRepository.deleteByUuid(uuid);
     }
 }
