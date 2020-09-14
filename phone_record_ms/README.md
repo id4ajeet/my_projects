@@ -19,15 +19,21 @@ Used to generate the cdr report
 
 ### How to test
 
-Step 1: Start the mock service
-
+Step 1: Start the mock service 
+```shell script
+   cd data/mock_pbx
+   node ./mock_server.js
+```
+        
 Step 2: run mock get_cdr mutiple times `curl -X GET "https://localhost:3030/get_cdr"`
 
-Step 3: Start the DB using `docker-compose up db`
+Step 3: Build the MS and its docker image `mvn clean install`
 
-Step 4: Start the MS using `docker-compose up ms`
+Step 4: Start the DB using `docker-compose up db`
 
-Step 5: Call phone-book api to store the valid contacts
+Step 5: Start the MS using `docker-compose up ms`
+
+Step 6: Call phone-book api to store the valid contacts
 
 ```shell script
 curl --location --request PUT 'http://localhost:8080/phonebook/all' \
@@ -56,14 +62,14 @@ curl --location --request PUT 'http://localhost:8080/phonebook/all' \
 ]'
 ```
 
-Step 6: Call the Webhook to store cdr `curl --location --request GET 'http://localhost:3030/trigger_webhooks'`
+Step 7: Call the Webhook to store cdr `curl --location --request GET 'http://localhost:3030/trigger_webhooks'`
         Note: `webhook_url` under settings.js is set to `http://localhost:8080/webhook` 
 
-Step 7: Call the sync api to consume the data from mocked get_cdr `curl --location --request GET 'http://localhost:8080/sync'`
+Step 8: Call the sync api to consume the data from mocked get_cdr `curl --location --request GET 'http://localhost:8080/sync'`
 
-step 8: Call the Report API to generate the report `curl --location --request GET 'http://localhost:8080/report'`
+step 9: Call the Report API to generate the report `curl --location --request GET 'http://localhost:8080/report'`
 
-Step 9: For Individual User report call with uuid `curl --location --request GET 'http://localhost:8080/report/5e9d0238-8e46-4a4e-a804-b18638927e01'`
+Step 10: For Individual User report call with uuid `curl --location --request GET 'http://localhost:8080/report/5e9d0238-8e46-4a4e-a804-b18638927e01'`
 
 
 ### Code Structure
@@ -80,6 +86,13 @@ Step 9: For Individual User report call with uuid `curl --location --request GET
   
 * Controller code is present in package `com.ajeet.impactt.api`
 
+* docker-compose.yaml file contains 2 services db (postgresql) and ms
+
+* data/init have schema definition for postgresql
+
+* data/mock_pbx have provided mocked node js service
+
+* fabric8 docker plugin used to create docker image
 
 ### Exposed APIs 
 
