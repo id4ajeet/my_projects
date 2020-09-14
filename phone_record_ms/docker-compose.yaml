@@ -15,7 +15,7 @@ services:
       timeout: 5s
       retries: 10
     volumes:
-      - db-data:/var/lib/postgresql/data
+#      - db-data:/var/lib/postgresql/data
       - init-data:/docker-entrypoint-initdb.d
     networks:
       - backend
@@ -37,15 +37,15 @@ networks:
   backend:
 
 volumes:
-  db-data:
-    driver: local
-    driver_opts:
-      o: bind
-      type: none
-      device: $PWD/data/store
   init-data:
     driver: local
     driver_opts:
       o: bind
       type: none
       device: $PWD/data/init
+#  db-data:
+#    driver: local
+#    driver_opts:
+#      o: bind
+#      type: none
+#      device: $PWD/data/store
