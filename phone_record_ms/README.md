@@ -22,16 +22,41 @@ Used to generate the cdr report
 Step 1: Start the mock service 
 ```shell script
    cd data/mock_pbx
+   npm i
    node ./mock_server.js
 ```
         
 Step 2: run mock get_cdr mutiple times `curl -X GET "https://localhost:3030/get_cdr"`
 
-Step 3: Build the MS and its docker image `mvn clean install`
+Step 3: Build the MS and its docker image 
+```shell script
+cd phone_record_ms
 
-Step 4: Start the DB using `docker-compose up db`
+mvn clean install
 
-Step 5: Start the MS using `docker-compose up ms`
+docker build -t phone_record_ms .
+
+#Check image 
+docker image ls
+```
+
+Step 4: Start the DB using 
+
+*Note* : Before using docker-compose file update the volume init-data with current directory location
+
+example : 
+replace `$PWD/data/init` with something like `/Users/ajesingh/my_projects/phone_record_ms/data/init`
+
+```shell script
+cd phone_record_ms
+docker-compose up db
+```
+
+Step 5: Start the MS using 
+```shell script
+cd phone_record_ms
+docker-compose up ms
+```
 
 Step 6: Call phone-book api to store the valid contacts
 

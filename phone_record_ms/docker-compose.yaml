@@ -15,12 +15,11 @@ services:
       timeout: 5s
       retries: 10
     volumes:
-#      - db-data:/var/lib/postgresql/data
-      - init-data:/docker-entrypoint-initdb.d
+      - initdata:/docker-entrypoint-initdb.d
     networks:
       - backend
   ms:
-    image: phone_record_ms:0.0.1-SNAPSHOT
+    image: phone_record_ms
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/cdrdb
       SPRING_DATASOURCE_USERNAME: ajeet
@@ -37,15 +36,9 @@ networks:
   backend:
 
 volumes:
-  init-data:
+  initdata:
     driver: local
     driver_opts:
       o: bind
       type: none
       device: $PWD/data/init
-#  db-data:
-#    driver: local
-#    driver_opts:
-#      o: bind
-#      type: none
-#      device: $PWD/data/store
