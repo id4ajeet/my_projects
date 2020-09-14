@@ -4,7 +4,11 @@ package com.ajeet.impactt.service.impl;
 import com.ajeet.impactt.service.dto.CallDataDto;
 import com.ajeet.impactt.service.dto.SyncDataDto;
 import com.ajeet.impactt.service.dto.SyncResponse;
-import com.ajeet.impactt.service.ifc.*;
+import com.ajeet.impactt.service.error.SyncException;
+import com.ajeet.impactt.service.ifc.ICDRSyncService;
+import com.ajeet.impactt.service.ifc.ICallDataRepoService;
+import com.ajeet.impactt.service.ifc.IPbxRestClient;
+import com.ajeet.impactt.service.ifc.ISyncDataRepoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -34,23 +38,22 @@ public class CDRSyncService implements ICDRSyncService {
 
     @Override
     public String sync() {
-        client.callGet().subscribe((response) -> {
+        client.callGet().subscribe(response -> {
 
             HttpHeaders headers = response.headers().asHttpHeaders();
             saveSyncDate(headers.get("date"));
 
             Mono<SyncResponse> bodyToMono = response.bodyToMono(SyncResponse.class);
-            bodyToMono.subscribe((body) -> {
+            bodyToMono.subscribe(body -> {
 
                 List<CallDataDto> data = body.getData();
                 callDataRepoService.saveAll(data);
-            }, (ex) -> {
-                throw new RuntimeException("Failed to Sync", ex);
+            }, ex -> {
+                throw new SyncException("Failed to Sync", ex);
             });
-        }, (ex) -> {
-            throw new RuntimeException("Failed to Sync", ex);
+        }, ex -> {
+            throw new SyncException("Failed to Sync", ex);
         });
-
         return "SYNC Triggered";
     }
 

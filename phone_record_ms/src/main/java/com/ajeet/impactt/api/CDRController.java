@@ -37,6 +37,10 @@ public class CDRController {
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
         produces = {MediaType.APPLICATION_JSON_VALUE})
     public String post(@RequestBody CallDataDto request) {
+        return callSave(request);
+    }
+
+    private String callSave(@RequestBody CallDataDto request) {
         boolean save = callDataService.save(request);
         return save ? "SUCCESS" : "FAILED";
     }
@@ -44,8 +48,7 @@ public class CDRController {
     @PutMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
         produces = {MediaType.APPLICATION_JSON_VALUE})
     public String put(@RequestBody CallDataDto request) {
-        boolean save = callDataService.save(request);
-        return save ? "SUCCESS" : "FAILED";
+        return callSave(request);
     }
 
     @DeleteMapping(path = "/{uuid}")

@@ -66,6 +66,21 @@ step 8: Call the Report API to generate the report `curl --location --request GE
 Step 9: For Individual User report call with uuid `curl --location --request GET 'http://localhost:8080/report/5e9d0238-8e46-4a4e-a804-b18638927e01'`
 
 
+### Code Structure
+
+* Persistence layer code is present in package `com.ajeet.impactt.persist`
+  * entities are in package `com.ajeet.impactt.persist.entity`
+  * repositories are in package `com.ajeet.impactt.persist.repository`
+  
+* Service layer code is present in package `com.ajeet.impactt.service`
+  * Service layer works on different DTO then persistence entities 
+  * Service layer DTOs are in package `com.ajeet.impactt.service.dto`
+  * Mapper can be found for that in package `com.ajeet.impactt.service.mapper`
+  * Service layer config are in package `com.ajeet.impactt.service.config`
+  
+* Controller code is present in package `com.ajeet.impactt.api`
+
+
 ### Exposed APIs 
 
 #### Phone Book Directory APIs

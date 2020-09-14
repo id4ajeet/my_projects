@@ -17,6 +17,8 @@ import java.util.List;
 @RequestMapping("/phonebook")
 public class PhoneBookController {
 
+    public static final String SUCCESS = "SUCCESS";
+    public static final String FAILED = "FAILED";
     private final IPhoneBookRepoService phoneBookService;
 
     @Autowired
@@ -37,22 +39,23 @@ public class PhoneBookController {
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
         produces = {MediaType.APPLICATION_JSON_VALUE})
     public String post(@RequestBody PhoneBookDto request) {
-        boolean save = phoneBookService.save(request);
-        return save ? "SUCCESS" : "FAILED";
+        return callSave(phoneBookService.save(request));
     }
 
     @PutMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
         produces = {MediaType.APPLICATION_JSON_VALUE})
     public String put(@RequestBody PhoneBookDto request) {
-        boolean save = phoneBookService.save(request);
-        return save ? "SUCCESS" : "FAILED";
+        return callSave(phoneBookService.save(request));
+    }
+
+    private String callSave(boolean save) {
+        return save ? SUCCESS : FAILED;
     }
 
     @PutMapping(path = "/all", consumes = {MediaType.APPLICATION_JSON_VALUE},
         produces = {MediaType.APPLICATION_JSON_VALUE})
     public String putAll(@RequestBody List<PhoneBookDto> request) {
-        boolean save = phoneBookService.saveAll(request);
-        return save ? "SUCCESS" : "FAILED";
+        return callSave(phoneBookService.saveAll(request));
     }
 
     @DeleteMapping(path = "/{id}")
