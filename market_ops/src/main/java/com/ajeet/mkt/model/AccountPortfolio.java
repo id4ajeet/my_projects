@@ -2,7 +2,7 @@
 package com.ajeet.mkt.model;
 
 /**
- * @author <a href="mailto:AjeetKumar.Singh1@britebill.com">Ajeet</a>
+ * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
  * <pre>
  *   {
  *     "id": "loan1234",

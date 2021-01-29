@@ -2,7 +2,6 @@ package com.ajeet.probs;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 /**
@@ -56,24 +55,22 @@ public class KLengthSubstrings {
         IntStream.range(0, k).forEach(i -> flag[chars[i] - 97]++);
 
         //Check if first k letters are unique
-        AtomicInteger count = new AtomicInteger();
+        int count = 0;
         if (!IntStream.range(0, 26).anyMatch(j -> flag[j] > 1)) {
-            count.getAndIncrement();
-
+            count++;
             substrings.add(new String(chars, 0, k));
         }
 
-        IntStream.range(k, input.length()).forEach(i -> {
+        for (int i = k; i < input.length(); i++) {
             flag[chars[i - k] - 97]--; //i-k reset the value by 1 as it used already, keep available for next
             flag[chars[i] - 97]++; //add counter for current
 
             //check if i-k to i chars are unique
             if (!IntStream.range(0, 26).anyMatch(j -> flag[j] > 1)) {
-                count.getAndIncrement();
-
+                count++;
                 substrings.add(new String(chars, i - k + 1, k));
             }
-        });
+        }
 
         System.out.println("Input : " + input + " " + substrings);
         return count;

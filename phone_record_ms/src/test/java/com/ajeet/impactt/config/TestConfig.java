@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
 
 /**
- * @author <a href="mailto:AjeetKumar.Singh1@britebill.com">Ajeet</a>
+ * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
  */
 @Configuration
 public class TestConfig {
