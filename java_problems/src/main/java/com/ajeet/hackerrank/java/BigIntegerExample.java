@@ -1,17 +1,11 @@
-/*
- * (c) Copyright 2020 Brite:Bill Ltd.
- *
- * 7 Grand Canal Street Lower, Dublin 2, Ireland
- * info@britebill.com
- * +353 1 661 9426
- */
+
 package com.ajeet.hackerrank.java;
 
 import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * @author <a href="mailto:AjeetKumar.Singh1@britebill.com">Ajeet</a>
+ * @author <a href="mailto:id4ajeet@gmail.com">Ajeet</a>
  */
 public class BigIntegerExample {
 
