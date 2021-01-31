@@ -11,13 +11,13 @@ import java.util.List;
 public class SortByCGPA {
 
     public static void main(String[] args) {
-        List<Student> studentList = new ArrayList<>();
-        studentList.add(new Student(33, "Rumpa", 3.68));
-        studentList.add(new Student(85, "Ashis", 3.85));
-        studentList.add(new Student(56, "Samiha", 3.75));
-        studentList.add(new Student(19, "Samara", 3.75));
-        studentList.add(new Student(18, "Samara", 3.75));
-        studentList.add(new Student(22, "Fahim", 3.76));
+        List<Student1> studentList = new ArrayList<>();
+        studentList.add(new Student1(33, "Rumpa", 3.68));
+        studentList.add(new Student1(85, "Ashis", 3.85));
+        studentList.add(new Student1(56, "Samiha", 3.75));
+        studentList.add(new Student1(19, "Samara", 3.75));
+        studentList.add(new Student1(18, "Samara", 3.75));
+        studentList.add(new Student1(22, "Fahim", 3.76));
 
         Collections.sort(studentList, (o1, o2) -> {
             if (o1.getCgpa() == o2.getCgpa()) {
@@ -35,12 +35,12 @@ public class SortByCGPA {
     }
 }
 
-class Student {
+class Student1 {
     private int id;
     private String fname;
     private double cgpa;
 
-    public Student(int id, String fname, double cgpa) {
+    public Student1(int id, String fname, double cgpa) {
         super();
         this.id = id;
         this.fname = fname;
