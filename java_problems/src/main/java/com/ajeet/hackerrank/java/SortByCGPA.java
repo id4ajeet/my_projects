@@ -11,6 +11,7 @@ import java.util.List;
 public class SortByCGPA {
 
     public static void main(String[] args) {
+
         List<Student1> studentList = new ArrayList<>();
         studentList.add(new Student1(33, "Rumpa", 3.68));
         studentList.add(new Student1(85, "Ashis", 3.85));
