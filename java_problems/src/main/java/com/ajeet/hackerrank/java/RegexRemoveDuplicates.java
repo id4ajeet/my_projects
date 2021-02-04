@@ -24,5 +24,4 @@ public class RegexRemoveDuplicates {
         // Prints the modified sentence.
         System.out.println(input);
     }
-
 }
